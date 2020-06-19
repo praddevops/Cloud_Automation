@@ -10,7 +10,9 @@ server:
   
         size_gb: 10
   
-        type: standard
+        type: ext4
+          
+        volume_class:  standard
   
         mount: /
   
@@ -18,8 +20,10 @@ server:
   
         size_gb: 100
   
-        type: standard
+        type: xfs
   
+        volume_class:  standard
+
         mount: /data
   
     users:
