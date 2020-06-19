@@ -1,5 +1,5 @@
 #this is a ec2 config file used by create_ec2.py to create ec2 instances in AWS cloud platform
-erver:
+server:
 
     instance_type: t3.small
     image_id: ami-09d95fab7fff3776c

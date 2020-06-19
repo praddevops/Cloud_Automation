@@ -12,10 +12,7 @@ ec2_config_file = 'ec2.yaml'
 with open(ec2_config_file, "r") as file:
     ec2_config = yaml.load(file, Loader=yaml.FullLoader)
 
-session = boto3.session.Session(
-        aws_access_key_id="<aws access key id here>",
-        aws_secret_access_key="<aws secret key here>",
-)
+session = boto3.session.Session()
 
 ec2 = session.resource('ec2', region_name="us-east-1")
 
