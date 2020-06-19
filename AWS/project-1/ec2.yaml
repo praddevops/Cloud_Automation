@@ -1,0 +1,29 @@
+#this is a ec2 config file used by create_ec2.py to create ec2 instances in AWS cloud platform
+erver:
+
+    instance_type: t3.small
+    image_id: ami-09d95fab7fff3776c
+  
+    volumes:
+  
+      - device: /dev/xvda
+  
+        size_gb: 10
+  
+        type: standard
+  
+        mount: /
+  
+      - device: /dev/xvdf
+  
+        size_gb: 100
+  
+        type: standard
+  
+        mount: /data
+  
+    users:
+  
+      - login: jenkins
+  
+        ssh_key: 'openssh formatted public key (For Example format, look in ~/.ssh/authorized_keys'
