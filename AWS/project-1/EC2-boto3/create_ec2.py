@@ -14,7 +14,7 @@ with open(ec2_config_file, "r") as file:
 
 session = boto3.session.Session()
 
-ec2 = session.resource('ec2', region_name="us-east-1")
+ec2 = session.resource('ec2')
 
 volumedevices = []
 user_data = ["#!/bin/sh\n"]

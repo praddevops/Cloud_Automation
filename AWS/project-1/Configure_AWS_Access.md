@@ -13,7 +13,7 @@ Below is a minimal example of the shared credentials file:
 [default]
 aws_access_key_id=<access key id here>
 aws_secret_access_key=<secret access key here>
-region_name=<region to use by default>
+region=<region to use by default>
 ```
 
-You may also have to configure other settings like default region, output type etc in ~/.aws/config depending on the type of resource you want to create
+You can also configure other settings like default region, output type etc in ~/.aws/config (INI format) depending on the type of resource you want to create

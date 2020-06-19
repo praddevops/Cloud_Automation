@@ -28,6 +28,6 @@ server:
   
     users:
   
-      - login: jenkins
+      - login: <user_name> # currently not used
   
-        ssh_key: 'openssh formatted public key (For Example format, look in ~/.ssh/authorized_keys'
+        ssh_key: 'openssh formatted public key (For Example format, look in ~/.ssh/authorized_keys)'
