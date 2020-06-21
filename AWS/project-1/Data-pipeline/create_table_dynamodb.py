@@ -4,24 +4,24 @@ Required 3rd party python packages that can be installed with pip: boto3, botoco
 python3 -m pip install <package-name>
 
 Usage: 
-  create_table_dynamodb.py -b Buckt_name
+  create_table_dynamodb.py -t table_name
   create_table_dynamodb.py -h | --help
 
 Options:
   -h --help
-  -b Buckt_name # Bucket name 
+  -t table_name # Bucket name 
 """
 
 
 import boto3
 from docopt import docopt
 
-table_name = 'my_table'
+table_name = 'my_table123'
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
-    if arguments["-b"] != None:
-        table_name = arguments["-b"]
+    if arguments["-t"] != None:
+        table_name = arguments["-t"]
 
 def create_dynamodb_table(dynamodb=None):
     if not dynamodb:
@@ -31,21 +31,21 @@ def create_dynamodb_table(dynamodb=None):
         TableName=table_name,
         KeySchema=[
             {
-                'AttributeName': 'year',
+                'AttributeName': 'location',
                 'KeyType': 'HASH'  # Partition key
             },
             {
-                'AttributeName': 'title',
+                'AttributeName': 'id',
                 'KeyType': 'RANGE'  # Sort key
             }
         ],
         AttributeDefinitions=[
             {
-                'AttributeName': 'year',
+                'AttributeName': 'id',
                 'AttributeType': 'N'
             },
             {
-                'AttributeName': 'title',
+                'AttributeName': 'location',
                 'AttributeType': 'S'
             },
 
