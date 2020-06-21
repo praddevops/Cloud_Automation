@@ -22,10 +22,11 @@ def lambda_handler(event, context):
         try:    
             table.put_item(
                 Item = {
-                    "id": item_data[0],
+                    "id": int(item_data[0]), #target attribute ('id') in Dynamidb table is of 'N' (numbeber) type
                     "name": item_data[1],
                     "location": item_data[2]
                 }
             )
         except Exception as e:
-            print("End of File")
+            print("Error inserting item in Dynamodb")
+            print(e)
