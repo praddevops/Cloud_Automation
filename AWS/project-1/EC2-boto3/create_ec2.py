@@ -31,7 +31,7 @@ for i in ec2_config['server']['volumes']:
                     },
                 })
         if i['mount'] != "/":
-            user_data.append("sudo mkfs -t "+i['type']+" "+i['device']+"\n"+"sudo mkdir -p "+i['mount']+"\n"+"sudo mount "+i['device']+" "+i['mount'])
+            user_data.append("sudo mkfs -t "+i['type']+" "+i['device']+"\n"+"sudo mkdir -p "+i['mount']+"\n"+"sudo mount "+i['device']+" "+i['mount']+"\n")
 
 publickey_bytes = str.encode(ec2_config['server']['users'][0]['ssh_key'])
 user_data_string = ''.join(user_data)
