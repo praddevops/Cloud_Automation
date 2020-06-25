@@ -1,2 +1,2 @@
-# Fun-in-the-Cloud
-Fun exersises using Cloud service
+# Cloud Automation
+Fun exersises involving Cloud services
